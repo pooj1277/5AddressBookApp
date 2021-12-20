@@ -1,12 +1,46 @@
 package com.bridgelabz.AddressbookApp.model;
 
+import com.bridgelabz.AddressbookApp.dto.AddressBookDTO;
+
 public class AddressBookData {
-    private int id;
-    private String fullName;
-    private String address;
-    private String city;
-    private String state;
-    private String emailId;
-    private int  zip;
-    private String  phoneNumber;
+
+	private int addressBookId;
+	private String firstName;
+	private String lastName;
+
+	public AddressBookData() {
+	}
+
+	public AddressBookData(int addressBookId, AddressBookDTO addressBookDTO) {
+		this.addressBookId = addressBookId;
+		this.firstName = addressBookDTO.firstName;
+		this.lastName = addressBookDTO.lastName;
+	}
+
+	
+	public int getAddressBookId() {
+		return addressBookId;
+	}
+
+	public void setAddressBookId(int addressBookId) {
+		this.addressBookId = addressBookId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	
 }
